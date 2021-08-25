@@ -332,17 +332,18 @@ class DB:
 			debug_print(1, str(ex))
 			return makeJsonResponse(1, "not connected to sql server", "")
 
-		# split multistatement queries, but ignore semicolon within queries
-		for statement in re.sub(r'(\)\s*);', r'\1%;%', sql).split('%;%'):
-			cursor.execute(statement)
-
 		print('------------------------------------------------------------------------------')
 		try:
 			print('Query request: ' + sql)
 		except Exception as ex:
 			print('Query will be executed: error printing the query. Check special characters and encoding.')
-		data = []
+		print('------------------------------------------------------------------------------')
 
+		# split multistatement queries, but ignore semicolon within queries
+		for statement in re.sub(r'(\)\s*);', r'\1%;%', sql).split('%;%'):
+			cursor.execute(statement)
+
+		data = []
 		response = {}
 		# Always try to fetch data independent of insert / select
 		try:
@@ -359,7 +360,6 @@ class DB:
 				column_names = cursor.column_names
 			response = sqlToJson(column_names, data, cursor.description)
 
-			print('------------------------------------------------------------------------------')
 			if(len(column_names) == 1) and (column_names[0] == ''):
 				print('Warning: No column names found')
 				print('------------------------------------------------------------------------------')
