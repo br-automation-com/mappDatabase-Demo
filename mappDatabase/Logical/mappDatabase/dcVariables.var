@@ -1,0 +1,4 @@
+VAR
+	Database : dbMAIN; (*Database main structure*)
+	Recipe : recMAIN; (*Recipe sample structure*)
+END_VAR

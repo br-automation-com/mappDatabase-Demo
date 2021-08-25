@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="contentDatabase_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Database.ERR.Text" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="txtDbErrorText" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Database.ERR.No" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="numDbStatusNo" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Database.PAR.IsConnected" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="StatusInitialized" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.DATA.temperature" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="txtDbTemp" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.DATA.milk" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="txtDbMilk" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.DATA.sugar" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="txtDbSugar" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.DATA.product_name" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="txtDbProduct" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.PAR.RecipeName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="lstRecNames" attribute="selectedValue" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.DATA.water" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="txtDbWater" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.PAR.RecipeNames" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="lstRecNames" attribute="dataProvider" />
+		</Binding>
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.PAR.RecipeNames" attribute="value" />
+<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="ListBox1" attribute="dataProvider" />
+</Binding>
+</Bindings>
+</BindingsSet>

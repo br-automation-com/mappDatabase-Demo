@@ -1,0 +1,12 @@
+
+TYPE
+	dbState_Enum : 
+		(
+		dbSTATE_WAIT,
+		dbSTATE_CONNECT,
+		dbSTATE_DISCONNECT,
+		dbSTATE_QUERY,
+		dbSTATE_NEXT,
+		dbSTATE_ERROR
+		);
+END_TYPE

@@ -1,0 +1,4 @@
+VAR
+	idx : USINT;
+	dbState : dbState_Enum;
+END_VAR

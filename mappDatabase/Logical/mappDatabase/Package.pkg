@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">mappDB</Object>
+    <Object Type="Program" Language="IEC">RecipeSample</Object>
+    <Object Type="File">dbTypes.typ</Object>
+    <Object Type="File">dcVariables.var</Object>
+    <Object Type="File">changelog.txt</Object>
+  </Objects>
+</Package>
