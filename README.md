@@ -11,14 +11,15 @@ This is a demo application for a simple recipe managment with mappDatabase. It i
 ![](https://github.com/br-automation-com/mappDatabase-Demo/blob/main/Wiki/screenshot.png)
 
 <a name="Script"></a>
-## Features
+## Python script changes
 This sample also includes a customized version of the Python script used to connect to the database server. The script is fully compatible with the B&R script. See Automation Studio help (e046127f-e239-4f17-bd17-3ae889dac782) and the [WIKI](https://github.com/br-automation-com/mappDatabase-Demo/wiki) for more details how to use the script.
 
 #### The script changes include:
-- Added more and detailed debug output
+- Added more and detailed error messages
+- Print all query and response details
 - Trim data type string when reading from database
 - Change MsSQL database provider to 'ODBC Driver 17 for SQL Server' to support linux systems
-- Removed dependecy from MySql driver for data conversion
+- Removed dependecy from MySql driver for data conversion. It is no longer required to install MySQL driver when using MsSQL.
 
 <a name="Requirements"></a>
 ## Requirements (current used versions)

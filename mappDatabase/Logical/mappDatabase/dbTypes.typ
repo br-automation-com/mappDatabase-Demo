@@ -9,7 +9,6 @@ TYPE
 	dbPAR : 	STRUCT 
 		IsConnected : BOOL;
 		QueryName : STRING[200];
-		Reponse : STRING[80];
 		RowsTotal : UDINT;
 		RowsRead : UDINT;
 		RowsRemaining : UDINT;

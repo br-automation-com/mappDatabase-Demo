@@ -1,6 +1,9 @@
 Version 1.0 (18.08.2021)
 - PythonScript: Added more and detailed debug output
+- PythonScript: Added more and detailed error messages
+- PythonScript: Print all query and response details
 - PythonScript: Trim data type string when reading from database
 - PythonScript: Change MsSQL database provider to 'ODBC Driver 17 for SQL Server' to support linux systems
-- PythonScript: Removed dependecy from MySql driver for data conversion
+- PythonScript: Removed dependecy from MySql driver for data conversion. Removed dependecy from MySql driver for data conversion. It is no longer required to install MySQL driver when using MsSQL.
+
 
