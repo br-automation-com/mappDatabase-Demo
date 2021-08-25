@@ -41,9 +41,5 @@
 			<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.PAR.RecipeNames" attribute="value" />
 			<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="lstRecNames" attribute="dataProvider" />
 		</Binding>
-	<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:Recipe.PAR.RecipeNames" attribute="value" />
-<Target xsi:type="brease" contentRefId="contentDatabase" widgetRefId="ListBox1" attribute="dataProvider" />
-</Binding>
-</Bindings>
+	</Bindings>
 </BindingsSet>

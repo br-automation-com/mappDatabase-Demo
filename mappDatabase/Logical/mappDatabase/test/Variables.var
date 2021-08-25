@@ -1,0 +1,5 @@
+VAR
+	tmpSTR1 : STRING[80];
+	tmpSTR2 : STRING[80];
+	create : UINT;
+END_VAR

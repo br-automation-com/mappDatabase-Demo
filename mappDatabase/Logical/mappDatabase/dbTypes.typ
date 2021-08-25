@@ -9,7 +9,6 @@ TYPE
 	dbPAR : 	STRUCT 
 		IsConnected : BOOL;
 		QueryName : STRING[200];
-		Reponse : STRING[80];
 		RowsTotal : UDINT;
 		RowsRead : UDINT;
 		RowsRemaining : UDINT;
@@ -45,6 +44,18 @@ TYPE
 		water : UINT;
 		milk : UINT;
 		temperature : REAL;
+		test1 : BOOL;
+		test2 : SINT;
+		test3 : INT;
+		test4 : DINT;
+		test5 : USINT;
+		test6 : UINT;
+		test7 : UDINT;
+		test8 : TIME;
+		test9 : REAL;
+		test10 : LREAL;
+		test11 : DATE;
+		test12 : DATE_AND_TIME;
 	END_STRUCT;
 	recMAIN : 	STRUCT 
 		CMD : recCMD;
