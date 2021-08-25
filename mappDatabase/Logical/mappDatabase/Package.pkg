@@ -7,5 +7,6 @@
     <Object Type="File">dbTypes.typ</Object>
     <Object Type="File">dcVariables.var</Object>
     <Object Type="File">changelog.txt</Object>
+    <Object Type="Program" Language="IEC">test</Object>
   </Objects>
 </Package>
