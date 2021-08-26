@@ -17,13 +17,9 @@ TYPE
 		Text : STRING[200];
 		No : DINT;
 	END_STRUCT;
-	dbVIS : 	STRUCT 
-		New_Member : USINT;
-	END_STRUCT;
 	dbMAIN : 	STRUCT 
 		CMD : dbCMD;
 		PAR : dbPAR;
-		VIS : dbVIS;
 		ERR : dbERR;
 	END_STRUCT;
 	recCMD : 	STRUCT 

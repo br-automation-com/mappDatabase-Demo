@@ -4,19 +4,21 @@ END_PROGRAM
 PROGRAM _CYCLIC
 	
 	// Generate a list with all recipe names
-	IF EDGEPOS(Recipe.CMD.List) OR EDGEPOS(Database.PAR.IsConnected) THEN
+	IF EDGEPOS(Database.PAR.IsConnected) THEN
+		Recipe.CMD.List := TRUE;
+	END_IF
+	IF EDGEPOS(Recipe.CMD.List) THEN
 		Database.PAR.QueryName := 'RecipeList';
 		Database.CMD.Execute := TRUE;
-		Recipe.CMD.List := TRUE;
 		idx := 0;
 		brsmemset(ADR(Recipe.PAR.RecipeNames), 0, SIZEOF(Recipe.PAR.RecipeNames));
 	END_IF
 	// Translate recipe names to mappView data providers
 	IF Recipe.CMD.List AND (EDGENEG(Database.CMD.Execute) OR EDGENEG(Database.CMD.NextRow)) THEN
 		brsstrcpy(ADR(Recipe.PAR.RecipeNames[idx]), ADR('{"value":"'));
-		brsstrcat(ADR(Recipe.PAR.RecipeNames[idx]), ADR(Recipe.PAR.RecipeName));
+		brsstrcat(ADR(Recipe.PAR.RecipeNames[idx]), ADR(Recipe.DATA.product_name));
 		brsstrcat(ADR(Recipe.PAR.RecipeNames[idx]), ADR('","text":"'));	
-		brsstrcat(ADR(Recipe.PAR.RecipeNames[idx]), ADR(Recipe.PAR.RecipeName));
+		brsstrcat(ADR(Recipe.PAR.RecipeNames[idx]), ADR(Recipe.DATA.product_name));
 		brsstrcat(ADR(Recipe.PAR.RecipeNames[idx]), ADR('"}'));
 		
 		// Read next entry as long as we have entries and space
