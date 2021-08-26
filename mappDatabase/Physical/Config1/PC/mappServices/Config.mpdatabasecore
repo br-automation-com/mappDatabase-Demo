@@ -78,7 +78,7 @@
             <Selector ID="Columns" Value="SingleColumns">
               <Group ID="[0]">
                 <Property ID="Column" Value="product_name" />
-                <Property ID="PV" Value="::Recipe.PAR.RecipeName" />
+                <Property ID="PV" Value="::Recipe.DATA.product_name" />
               </Group>
             </Selector>
           </Selector>
