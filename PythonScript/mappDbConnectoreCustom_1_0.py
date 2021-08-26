@@ -8,6 +8,7 @@ import socketserver
 import collections
 import decimal
 import re
+import sys
 
 __version__ = "5.12.0"
 	
