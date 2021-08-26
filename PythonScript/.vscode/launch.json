@@ -5,12 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Maria DB, Remote, Port 3306",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "85",
+                "10.49.140.150",
+                "3306",
+                "mysql"
+            ]
+        },
+        {
             "name": "Python: Microsoft SQL, Localhost, Port 1433",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["85", "127.0.0.1", "1433", "mssql"]
+            "args": [
+                "85",
+                "127.0.0.1",
+                "1433",
+                "mssql"
+            ]
         }
     ]
 }
