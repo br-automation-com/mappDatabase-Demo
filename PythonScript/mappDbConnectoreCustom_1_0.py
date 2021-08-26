@@ -359,7 +359,6 @@ class DB:
 				column_names = [column[0] for column in cursor.description]
 			else:
 				column_names = cursor.column_names
-			response = sqlToJson(column_names, data, cursor.description)
 
 			if(len(column_names) == 1) and (column_names[0] == ''):
 				print('Warning: No column names found')
@@ -374,6 +373,8 @@ class DB:
 						print(str(column_names[i]) + ': ' + str(field).strip())
 						i = i + 1
 					print('------------------------------------------------------------------------------')
+
+			response = sqlToJson(column_names, data, cursor.description)
 
 		self._cnx.commit()
 		cursor.close()
