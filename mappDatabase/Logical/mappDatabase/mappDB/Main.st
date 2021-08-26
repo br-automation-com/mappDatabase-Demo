@@ -59,13 +59,13 @@ PROGRAM _CYCLIC
 			SqlTimeout.IN := 1;
 			SqlTimeout();
 
-			IF MpDatabaseCore_0.CommandDone OR MpDatabaseCore_0.Error <> 0 THEN
-				IF MpDatabaseCore_0.Error = ERR_OK THEN
-					Database.CMD.Connect := FALSE;
-					dbState := dbSTATE_WAIT;
-				ELSE
+			IF MpDatabaseCore_0.CommandDone OR MpDatabaseCore_0.Error THEN
+				IF MpDatabaseCore_0.Error THEN
 					Database.ERR.No := MpDatabaseCore_0.StatusID;
 					dbState := dbSTATE_ERROR;
+				ELSE
+					Database.CMD.Connect := FALSE;
+					dbState := dbSTATE_WAIT;
 				END_IF
 			ELSIF SqlTimeout.Q THEN
 				Database.ERR.No := ERR_SQL_TIMEOUT_CONNECT;
@@ -79,14 +79,14 @@ PROGRAM _CYCLIC
 			SqlTimeout.IN := 1;
 			SqlTimeout();
 
-			IF MpDatabaseCore_0.CommandDone OR MpDatabaseCore_0.Error <> 0 THEN
+			IF MpDatabaseCore_0.CommandDone OR MpDatabaseCore_0.Error THEN
 
-				IF MpDatabaseCore_0.Error = ERR_OK THEN
-					Database.CMD.Disconnect := FALSE;
-					dbState := dbSTATE_WAIT;			
-				ELSE
+				IF MpDatabaseCore_0.Error THEN
 					Database.ERR.No := MpDatabaseCore_0.StatusID;
 					dbState := dbSTATE_ERROR;
+				ELSE
+					Database.CMD.Disconnect := FALSE;
+					dbState := dbSTATE_WAIT;			
 				END_IF
 			ELSIF SqlTimeout.Q THEN
 				Database.ERR.No := ERR_SQL_TIMEOUT_CONNECT;
@@ -100,14 +100,14 @@ PROGRAM _CYCLIC
 			SqlTimeout.IN := 1;
 			SqlTimeout();
 
-			IF MpDatabaseQuery_0.CommandDone OR MpDatabaseQuery_0.Error <> 0 THEN
+			IF MpDatabaseQuery_0.CommandDone OR MpDatabaseQuery_0.Error THEN
 				Database.CMD.Execute := FALSE;
 
-				IF MpDatabaseQuery_0.Error = ERR_OK THEN
-					dbState := dbSTATE_WAIT;			
-				ELSE
+				IF MpDatabaseQuery_0.Error THEN
 					Database.ERR.No := MpDatabaseQuery_0.StatusID;
 					dbState := dbSTATE_ERROR;
+				ELSE
+					dbState := dbSTATE_WAIT;			
 				END_IF
 			ELSIF NOT Database.PAR.IsConnected THEN
 				Database.ERR.No := ERR_SQL_NOT_CONNECTED;
@@ -124,14 +124,14 @@ PROGRAM _CYCLIC
 			SqlTimeout.IN := 1;
 			SqlTimeout();
 
-			IF MpDatabaseQuery_0.CommandDone OR MpDatabaseQuery_0.Error <> 0 THEN
+			IF MpDatabaseQuery_0.CommandDone OR MpDatabaseQuery_0.Error THEN
 				Database.CMD.NextRow := FALSE;
 
-				IF MpDatabaseQuery_0.Error = ERR_OK THEN
-					dbState := dbSTATE_WAIT;			
-				ELSE
+				IF MpDatabaseQuery_0.Error THEN
 					Database.ERR.No := MpDatabaseQuery_0.StatusID;
 					dbState := dbSTATE_ERROR;
+				ELSE
+					dbState := dbSTATE_WAIT;			
 				END_IF
 			ELSIF SqlTimeout.Q THEN
 				Database.ERR.No := ERR_SQL_TIMEOUT_QUERY;
