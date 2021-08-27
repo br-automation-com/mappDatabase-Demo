@@ -5,7 +5,7 @@
     <Object Type="Program" Language="IEC">mappDB</Object>
     <Object Type="Program" Language="IEC">RecipeSample</Object>
     <Object Type="File">dbTypes.typ</Object>
-    <Object Type="File">dcVariables.var</Object>
+    <Object Type="File">dbVariables.var</Object>
     <Object Type="File">changelog.txt</Object>
     <Object Type="Program" Language="IEC">test</Object>
   </Objects>
