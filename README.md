@@ -18,8 +18,8 @@ This sample also includes a customized version of the Python script used to conn
 - Added more and detailed error messages
 - Print all SQL queries and server response details
 - Trim data type string when reading from database
-- Change MsSQL database provider to 'ODBC Driver 17 for SQL Server' to support linux systems
-- Removed dependecy from MySql driver for data conversion. It is no longer required to install MySQL driver when using MsSQL.
+- Change MsSQL database provider to 'ODBC Driver 17 for SQL Server' to support Linux systems
+- Removed dependency from MySql driver for data conversion. It is no longer required to install MySQL driver when using MsSQL.
 
 <a name="Requirements"></a>
 ## Requirements (current used versions)
