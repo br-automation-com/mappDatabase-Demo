@@ -3,7 +3,6 @@
 <Program SubType="IEC" xmlns="http://br-automation.co.at/AS/Program">
   <Files>
     <File Description="Init, cyclic, exit code">Main.st</File>
-    <File Description="Local data types" Private="true">LocalTypes.typ</File>
     <File Description="Local variables" Private="true">LocalVariables.var</File>
   </Files>
 </Program>

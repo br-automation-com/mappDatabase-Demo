@@ -1,19 +1,19 @@
 (*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*)
 (*SQL function calls*)
 VAR
-	MpDatabaseCore_0 : MpDatabaseCore;
-	MpDatabaseQuery_0 : MpDatabaseQuery;
+	MpDatabaseCore_0 : MpDatabaseCore; (*mappDatabase main function block*)
+	MpDatabaseQuery_0 : MpDatabaseQuery; (*mappDatabase query*)
 END_VAR
 (*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*)
 (*Local variables*)
 VAR
-	SqlTimeout : TON_10ms;
-	dbState : dbState_Enum;
+	SqlTimeout : TON_10ms; (*Timeout for SQL commands*)
+	dbState : dbState_Enum; (*State machine*)
 END_VAR
 (*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*)
 (*Configuration for database managment*)
 VAR CONSTANT
-	TIMEOUT : UINT := 100; (*Timeout for SQL connection and query*)
+	TIMEOUT : UINT := 100; (*Timeout for SQL connection and query, default is 100=>1s*)
 END_VAR
 (*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*)
 (*Local constants*)
