@@ -333,7 +333,6 @@ class DB:
 			debug_print(1, str(ex))
 			return makeJsonResponse(1, "not connected to sql server", "")
 
-		print('------------------------------------------------------------------------------')
 		try:
 			print('Query request: ' + sql)
 		except Exception as ex:
@@ -452,6 +451,12 @@ class S(BaseHTTPRequestHandler):
 			# FIXME: handle invalid request
 			length = int(self.headers.get('content-length'))
 			data = urllib.parse.parse_qs(self.rfile.read(length).decode('utf-8'), keep_blank_values=1, encoding='utf-8')
+			print('------------------------------------------------------------------------------')
+			try:
+				print('PLC data: ' + str(data))
+			except Exception as ex:
+				print('Query will be executed: error printing the query. Check special characters and encoding.')
+
 			jsonRequest = list(data.items())[0][0]
 
 			try:
