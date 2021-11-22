@@ -33,6 +33,10 @@ Recommended task class is #8 with a 10ms cycle time. For the nettime and axis ta
 ## Revision History
 You can find details in the project in "revision.txt"
 
+#### Next Version (22.11.2021)
+- PLC: Update to runtime E4.90 and mapp 5.15
+- PythonScript: Added PLC raw data to debug output
+
 #### Version 1.0
 - First public release
 
