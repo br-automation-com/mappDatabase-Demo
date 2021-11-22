@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* MpDatabase 5.14.1 */
+/* MpDatabase 5.15.0 */
 
 #ifndef _MPDATABASE_
 #define _MPDATABASE_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _MpDatabase_VERSION
-#define _MpDatabase_VERSION 5.14.1
+#define _MpDatabase_VERSION 5.15.0
 #endif
 
 #include <bur/plctypes.h>
