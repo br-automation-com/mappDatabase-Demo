@@ -1,0 +1,2 @@
+Version 1.0 (23.12.2021)
+- First public release

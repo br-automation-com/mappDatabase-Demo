@@ -14,5 +14,8 @@
     <Object Type="Library" Language="Binary" Description="mapp components diagnosis,hierarchy and unit handling">MpCom</Object>
     <Object Type="Library" Language="Binary" Description="Core library for mapp components">MpBase</Object>
     <Object Type="Library" Language="Binary" Description="Interface to SQL database">MpDatabase</Object>
+    <Object Type="Library" Language="IEC">MpCfg</Object>
+    <Object Type="Library" Language="binary" Description="The FileIO library provides function blocks for file handling.">FileIO</Object>
+    <Object Type="Library" Language="binary" Description="This library contains FBKs for pinging a station.">AsICMP</Object>
   </Objects>
 </Package>

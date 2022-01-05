@@ -8,6 +8,7 @@ TYPE
 	END_STRUCT;
 	dbPAR : 	STRUCT  (*Database parameter structure*)
 		IsConnected : BOOL; (*Shows if database connection is active*)
+		CanPing : BOOL; (*Shows if database connection is active*)
 		QueryName : STRING[200]; (*Name of the SQL query define under mappServices*)
 		RowsTotal : UDINT; (*Total number of response rows*)
 		RowsRead : UDINT; (*Rows already reqeusted*)

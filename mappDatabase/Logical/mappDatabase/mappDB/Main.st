@@ -5,9 +5,43 @@ PROGRAM _INIT
 	MpDatabaseQuery_0.MpLink := ADR(gDatabaseCore);
 
 	SqlTimeout.PT := TIMEOUT;
+	
+	REPEAT
+		MpCfgRW_01.Enable 		:= TRUE;
+		MpCfgRW_01.MpLink 		:= gDatabaseCore;
+		MpCfgRW_01.ReadWrite 	:= MpCfgRead;
+		MpCfgRW_01.ParaName 	:= 'IPAddress';
+		MpCfgRW_01.GroupArray	:= 0;
+		MpCfgRW_01();
+		UNTIL MpCfgRW_01.CommandDone
+	END_REPEAT;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
+		// Trigger ping request
+	PingTimer.IN := TRUE;
+	PingTimer.PT := PING_TIMEOUT;
+	PingTimer();
+	// Try to ping network share if not connected
+	IF(MpCfgRW_01.Value <> '' AND PingTimer.Q) THEN
+		IcmpPing_0(enable := 1, pHost := ADR(MpCfgRW_01.Value), timeout := PING_TIMEOUT);
+		// Ping was OK
+		IF(IcmpPing_0.status = ERR_OK) THEN
+			PingTimer(IN := FALSE);
+			Database.PAR.CanPing := TRUE;
+			// Disconnect from share when ping failed
+		ELSIF(IcmpPing_0.status <> ERR_FUB_BUSY) THEN
+			PingTimer(IN := FALSE);
+			Database.PAR.CanPing := FALSE;
+			IF(Database.PAR.IsConnected) THEN
+				Database.CMD.Disconnect := TRUE;
+			END_IF
+		END_IF
+	ELSIF(PingTimer.Q) THEN
+		PingTimer(IN := FALSE);
+	END_IF
+	
 	// --------------------------------------------------------------------------------------------------------------------
 	// Database state machine
 	// --------------------------------------------------------------------------------------------------------------------

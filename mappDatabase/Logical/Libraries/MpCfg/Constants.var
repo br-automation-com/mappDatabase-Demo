@@ -1,0 +1,32 @@
+(*Buffer and variable sizes*)
+VAR CONSTANT
+	MpCfgMaxBufferSize : UINT := 20000; (*Maximum size of the configuration file*)
+	MpCfgMaxNameSize : UINT := 200; (*Maximum length of the parameter name*)
+	MpCfgMaxValueSize : UINT := 200; (*Maximum length of the value information*)
+END_VAR
+(*Error numbers*)
+VAR CONSTANT
+	MpCfgBufferSizeExceeded : DINT := 10001; (*Configuration file is larger than MpCfgMaxBufferSize | Increase value of MpCfgMaxBufferSize*)
+	MpCfgDataTypeSizeExceeded : DINT := 10002; (*Data type information is larger than MpCfgMaxNameSize | Increase value of MpCfgMaxNameSize*)
+	MpCfgValueSizeExceeded : DINT := 10003; (*Value length is larger than MpCfgMaxNameSize | Increase value of MpCfgMaxNameSize*)
+	MpCfgGroupNotFound0 : DINT := 10010; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound1 : DINT := 10011; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound2 : DINT := 10012; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound3 : DINT := 10013; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound4 : DINT := 10014; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound5 : DINT := 10015; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound6 : DINT := 10016; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound7 : DINT := 10017; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound8 : DINT := 10018; (*Group name does not exist | Check group array data at index x*)
+	MpCfgGroupNotFound9 : DINT := 10019; (*Group name does not exist | Check group array data at index x*)
+	MpCfgParaNotFound : DINT := 10020; (*Parameter name does not exist in configuration | Double check parameter name*)
+	MpCfgTypeNotFound : DINT := 10021; (*Data type information was not found | Shouldnt happen but just in case it does*)
+	MpCfgValueNotFound : DINT := 10022; (*Value information was not found | Shouldnt happen but just in case it does*)
+	MpCfgParaNameEmpty : DINT := 10030; (*Parameter name is empty*)
+	MpCfgMpLinkEmpty : DINT := 10031; (*mapp Link is missing*)
+END_VAR
+(*Read/Write constants*)
+VAR CONSTANT
+	MpCfgRead : BOOL := FALSE;
+	MpCfgWrite : BOOL := TRUE;
+END_VAR

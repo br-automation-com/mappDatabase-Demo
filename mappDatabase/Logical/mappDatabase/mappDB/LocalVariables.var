@@ -5,6 +5,13 @@ VAR
 	MpDatabaseQuery_0 : MpDatabaseQuery; (*mappDatabase query*)
 END_VAR
 (*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*)
+VAR
+	MpCfgRW_01 : MpCfgRW; (*Functionblock for mapp configuration read/write*)
+	IcmpPing_0 : IcmpPing; (*Ping network share*)
+	PingTimer : TON_10ms;
+	PING_TIMEOUT : UINT := 200; (*Timeout for ping response*)
+END_VAR
+(*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*)
 (*Local variables*)
 VAR
 	SqlTimeout : TON_10ms; (*Timeout for SQL commands*)
