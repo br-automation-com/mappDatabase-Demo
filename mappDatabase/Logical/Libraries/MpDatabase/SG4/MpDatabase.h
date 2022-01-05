@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* MpDatabase 5.15.0 */
+/* MpDatabase 5.16.1 */
 
 #ifndef _MPDATABASE_
 #define _MPDATABASE_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _MpDatabase_VERSION
-#define _MpDatabase_VERSION 5.15.0
+#define _MpDatabase_VERSION 5.16.1
 #endif
 
 #include <bur/plctypes.h>
@@ -53,7 +53,8 @@ typedef enum MpDatabaseErrorEnum
 	mpDATABASE_INF_WAIT_CORE_FB = 1083316230,
 	mpDATABASE_WRN_QUERY_RESULT = -2137909241,
 	mpDATABASE_ERR_QUERY_RESULT = -1064167416,
-	mpDATABASE_ERR_INVALID_USER = -1064167415
+	mpDATABASE_ERR_INVALID_USER = -1064167415,
+	mpDATABASE_WRN_PV_ARRAY_SIZE = -2137909238
 } MpDatabaseErrorEnum;
 
 typedef struct MpDatabaseQueryRowsInfoType

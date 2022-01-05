@@ -1,5 +1,6 @@
-Next Version (22.11.2021)
-- PLC: Update to runtime E4.90 and mapp 5.15
+Version 1.1 (05.01.2022)
+- Added script server ping
+- PLC: Update to runtime E4.90 and mapp 5.16
 - PythonScript: Added PLC raw data to debug output
 
 Version 1.0 (18.08.2021)

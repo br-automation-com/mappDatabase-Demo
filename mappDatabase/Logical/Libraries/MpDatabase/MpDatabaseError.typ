@@ -19,6 +19,7 @@ TYPE
         mpDATABASE_INF_WAIT_CORE_FB := 1083316230, (* Waiting for parent component [Informational: 6150, 0x40921806] *)
         mpDATABASE_WRN_QUERY_RESULT := -2137909241, (* When interpreting SQL result, PV "{2:PvName}" was written with a warning {3:ErrorNumber} [Warning: 6151, 0x80921807] *)
         mpDATABASE_ERR_QUERY_RESULT := -1064167416, (* Error when interpreting SQL result, error number: "{2:ErrorNumber}" [Error: 6152, 0xc0921808] *)
-        mpDATABASE_ERR_INVALID_USER := -1064167415 (* Query "{2:QueryName}" can only be executed from a widget [Error: 6153, 0xc0921809] *)
+        mpDATABASE_ERR_INVALID_USER := -1064167415, (* Query "{2:QueryName}" can only be executed from a widget [Error: 6153, 0xc0921809] *)
+        mpDATABASE_WRN_PV_ARRAY_SIZE := -2137909238 (* The size of the PVs in query "{2:QueryName}" differs between PVs [Warning: 6154, 0x8092180a] *)
         );
 END_TYPE

@@ -11,11 +11,11 @@
     <Object Type="Library" Language="binary" Description="This library contains standard function blocks and functions for IEC 61131-3.">standard</Object>
     <Object Type="Library" Language="IEC">IecCheck</Object>
     <Object Type="Library" Language="binary" Description="The SYS_LIB library contains functions for memory management and operating system manipulation as well as hardware-specific functions.">sys_lib</Object>
-    <Object Type="Library" Language="Binary" Description="mapp components diagnosis,hierarchy and unit handling">MpCom</Object>
-    <Object Type="Library" Language="Binary" Description="Core library for mapp components">MpBase</Object>
-    <Object Type="Library" Language="Binary" Description="Interface to SQL database">MpDatabase</Object>
     <Object Type="Library" Language="IEC">MpCfg</Object>
     <Object Type="Library" Language="binary" Description="The FileIO library provides function blocks for file handling.">FileIO</Object>
     <Object Type="Library" Language="binary" Description="This library contains FBKs for pinging a station.">AsICMP</Object>
+    <Object Type="Library" Language="Binary" Description="mapp components diagnosis,hierarchy and unit handling">MpCom</Object>
+    <Object Type="Library" Language="Binary" Description="Core library for mapp components">MpBase</Object>
+    <Object Type="Library" Language="Binary" Description="Interface to SQL database">MpDatabase</Object>
   </Objects>
 </Package>
