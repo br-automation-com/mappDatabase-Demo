@@ -33,6 +33,9 @@ Recommended task class is #8 with a 10ms cycle time. For the nettime and axis ta
 ## Revision History
 You can find details in the project in "revision.txt"
 
+#### Version 1.2 (10.02.2023)
+- PythonScript: Support for MS SQL data type decimal
+
 #### Version 1.1 (05.01.2022)
 - Added script server ping
 - PLC: Update to runtime E4.90 and mapp 5.16
