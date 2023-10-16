@@ -29,7 +29,7 @@ FieldType_SHORT = 2
 FieldType_LONGLONG = 8
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Dictionary for translating odbc datatype to MpDatabase approved types (currenly based on MySql type table)
+# Dictionary for translating odbc datatype to MpDatabase approved types (currently based on MySql type table)
 pyodbc_mysql_datatype_map = {
 	bool: (FieldType_BIT),
 	str: (FieldType_VAR_STRING),
@@ -341,7 +341,7 @@ class DB:
 			print('Query will be executed: error printing the query. Check special characters and encoding.')
 		print('------------------------------------------------------------------------------')
 
-		# split multistatement queries, but ignore semicolon within queries
+		# split multi-statement queries, but ignore semicolon within queries
 		for statement in re.sub(r'(\)\s*);', r'\1%;%', sql).split('%;%'):
 			cursor.execute(statement)
 
@@ -354,7 +354,7 @@ class DB:
 			pass
 
 		# ----------------------------------------------------------------------------------------------------------------------
-		# Cursor description is available if there was a response. Hence we create the json response that can later be forwared
+		# Cursor description is available if there was a response. Hence we create the json response that can later be forwarded
 		if(cursor.description):
 			if(args.sqlType == 'mssql') or (args.sqlType == 'postgres'):
 				column_names = [column[0] for column in cursor.description]
